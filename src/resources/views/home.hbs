@@ -1,0 +1,91 @@
+         
+         
+          <class class="anh">
+              <img onclick="a()"  src="bia1.jpg" width="1520px" height="740px" style="text-align: left;"  alt="" >
+          </class>
+           {{!-- <script>
+                var index = 1;
+                a = function() {
+                    var imgs = ["bia1.jpg","bia2.JPG","bia3.JPG"];
+                    document.getElementById('img').src = imgs[index];
+                    index++;
+                    if( index==3 ){
+                        index=0;
+                    }
+                
+                    
+                }
+                setInterval(a,3000);
+            </script> --}}
+            <style>
+                .back {
+                    margin-left: 40px;
+                    
+                }
+            </style>
+            <br />
+            <br />
+            <table>
+                <td>
+            <img src="anh11.jpg"  class="mua" > 
+
+                </td>
+        <td>
+            <label class="muahong">
+            <h1 > 
+                Mua không!!!
+            </h1>
+             </label>
+        </td>
+            </table>
+            
+<div class="mt-5 back">
+    <div class="row">
+
+            {{#each courst}}
+        <div class="col-sm-3 ">
+            <div class="card card-anh">
+                <a href="/vay/{{this.slug}}"> 
+             <img src="{{this.anh}}" class="card-img-top"  alt="{{this.name}}">
+                </a>
+             <div class="card-body">
+                <a href="/{{this.slug}}"> 
+               
+           <h5 class="card-title">{{this.name}}  </h5>
+            </a>     
+        
+
+            <label class="card-text"  style="color: chocolate;margin-left: 40px; "> {{this.Gia}} Đ</label>
+
+            <button style="margin-left: 100px; " onclick="click()" id="giohang" >
+
+                Thêm Vào Giỏ Hàng 
+
+            </button>
+         
+        
+    
+             </div>
+             
+        </div>
+        </div>
+        
+        {{/each}}
+    
+    </div>
+</div>
+
+<script>
+ 
+    function click(){
+
+            var a = document.getElementById('giohang');
+            console.log(a);
+            console.log(1);
+    }
+   
+</script>
+    
+
+
+ 

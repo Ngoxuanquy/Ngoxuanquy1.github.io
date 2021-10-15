@@ -1,0 +1,161 @@
+<html>
+    <title>Đăng ký </title>
+    <head>
+        <title>Hello Javascript</title>
+     
+            
+        <script type = "text/javascript">
+           function validateForm()  {
+               var u = document.getElementById("name").value;
+               var p = document.getElementById("password").value;
+               if(u== "") {
+                   alert("Please enter your Username");
+                   return false;
+               }
+               if(p == "") {
+                   alert("Please enter you Password");
+                   return false;
+               }
+               alert("Đăng nhập thàng công! ")
+               return true;
+           }
+        </script>
+     </head>
+    <body>
+        <span style="text-align: center">
+                <div class="DangKy">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+            <p>
+            <font size="+4" >
+                
+                <h1>Đăng Kí</h1></font>
+            </p>
+          <!-- <form method="GET" action="DanhNhap.html" onsubmit="return gettext()"> -->
+            <p>
+                Nhập Tài Khoản
+                <input name="text" class="name" onchange="gettex()"  placeholder="Nhập Tài Khoản"> 
+                <script>
+                    function gettex(){
+                        // var taikhoan1 = document.getElementById('.name').value;
+                        var taikhoan = document.querySelector('.name').value;
+                        console.log(taikhoan);
+                     
+                    } 
+                </script>
+            </p>
+            <p>
+                Nhập Mật Khẩu 
+                <input type="password" class="password"  onchange="gettex1()" placeholder="Nhập Mật Khẩu"> 
+                
+                <script>
+                    function gettex1(){
+                        var matkhau = document.querySelector('.password').value;
+                        console.log(matkhau);
+                    } 
+                </script>
+            </p>
+
+            <p>
+                Nhập Lại Mật Khẩu 
+                <input type="password" id="passwordlai" onchange="gettex2()" placeholder="Nhập Lại Mật Khẩu"> 
+                <script>
+                    function gettex2(){
+                        var matkhaulai = document.querySelector('#passwordlai').value;
+                        if(matkhaulai != document.querySelector('.password').value){
+                           var a =  "Mật Khẩu Không Khớp";  
+                            document.getElementById("p").innerHTML = a;
+                        }
+                        if(matkhaulai === document.querySelector('.password').value){
+                            var a =  "";
+                            document.getElementById("p").innerHTML = a;
+                        }
+                }
+                </script>
+                <p id="p" style="color: red;" >
+
+                   </p>
+                  
+            </p>
+
+
+
+            <p>Ngày Sinh
+            <select name="day" id="day">
+                Ngày Sinh
+                <option value="Ngày 1"> Ngày 1</option>
+                <option value="Ngày 1"> Ngày 2</option>
+                <option value="Ngày 1"> Ngày 3</option>
+                <option value="Ngày 1"> Ngày 4</option>
+                <option value="Ngày 1"> Ngày 5</option>
+                <option value="Ngày 1"> Ngày 6</option>
+                <option value="Ngày 1"> Ngày 7</option>
+                <option value="Ngày 1"> Ngày 8</option>
+                <option value="Ngày 1"> Ngày 9</option>
+                <option value="Ngày 1"> Ngày 10</option>
+                <option value="Ngày 1"> Ngày 11</option>
+                <option value="Ngày 1"> Ngày 12</option>
+                <option value="Ngày 1"> Ngày 13</option>
+                <option value="Ngày 1"> Ngày 14</option>
+                <option value="Ngày 1"> Ngày 15</option>
+                <option value="Ngày 1"> Ngày 16</option>
+                <option value="Ngày 1"> Ngày 17</option>
+                <option value="Ngày 1"> Ngày 18</option>
+                <option value="Ngày 1"> Ngày 19</option>
+                <option value="Ngày 1"> Ngày 20</option>
+                <option value="Ngày 1"> Ngày 21</option>
+                <option value="Ngày 1"> Ngày 22</option>
+                <option value="Ngày 1"> Ngày 23</option>
+                <option value="Ngày 1"> Ngày 24</option>
+                <option value="Ngày 1"> Ngày 25</option>
+                <option value="Ngày 1"> Ngày 26</option>
+                <option value="Ngày 1"> Ngày 27</option>
+                <option value="Ngày 1"> Ngày 28</option>
+                <option value="Ngày 1"> Ngày 29</option>
+                <option value="Ngày 1"> Ngày 30</option>
+                <option value="Ngày 1"> Ngày 31</option>
+
+            </select> 
+            <select name="month" id="month">
+                Tháng Sinh 
+                <option value="Tháng 1">Tháng 1 </option> 
+                <option value="Tháng 2">Tháng 2 </option>
+                <option value="Tháng 3">Tháng 3 </option>
+                <option value="Tháng 4">Tháng 4 </option>
+                <option value="Tháng 5">Tháng 5 </option>
+                <option value="Tháng 6">Tháng 6 </option>
+                <option value="Tháng 7">Tháng 7 </option>
+                <option value="Tháng 8">Tháng 8 </option>
+                <option value="Tháng 9">Tháng 9 </option>
+                <option value="Tháng 10">Tháng 10 </option>
+                <option value="Tháng 11">Tháng 11 </option>
+                <option value="Tháng 12">Tháng 12 </option>
+
+            </select>
+            <select name="year" id="year">
+                <option value="Năm 2002">Năm 2002</option> 
+            </select>
+        </p>
+        <p>
+            Số Điện Thoại 
+            <input name="text" id="test" placeholder="Nhập Số Điện Thoại "> 
+        </p>
+    
+        <div class="btn-box" >
+            <button type="submit">
+        
+       <!-- <a href="DanhNhap.html" style="color: black; text-decoration: none">         -->
+        Đăng ký tk
+          <!-- </a> -->
+                </a>	</button>
+            </form>
+            <br><br><br>
+        </div>
+    </span>
+        </font>
+       
+    </div> 
+    </body>
+</html>

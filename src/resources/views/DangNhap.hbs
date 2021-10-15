@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+      <title>Hello Javascript</title>
+      <script type = "text/javascript">
+         function validateForm()  {
+             var u = document.getElementById("username").value;
+             var p = document.getElementById("password").value;
+ 
+             if(u== "") {
+                 alert("Vui lòng Nhập Tài khoản! ");
+                 return false;
+             }
+             if(p == "") {
+                 alert("Vui lòng Nhập Mật Khẩu! ");
+                 return false;
+             }
+ 
+             alert("Đăng nhập thàng công! ")
+ 
+             return true;
+           
+         }
+      </script>
+   </head>
+   <body>
+   
+ <span style="text-align: center;">
+    <p class="ĐangNhap">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+         <font size="+4" style="color:coral "> Đăng nhập </font>
+ 
+      <div style="border:1px solid #ddd; padding: 5px;">
+         <form method="GET" action="/" onsubmit = "return validateForm()">
+            Tài Khoản: <input type="text" name="username" id="username" placeholder="Nhập Tài Khoản">
+            <br><br>
+            Mật Khẩu: <input type="password" name = "password" id="password" placeholder="Nhập Mật Khẩu">
+            <br><br>
+            <button type="submit" >Đăng Nhập</button>
+         </form>
+
+         <div class="btn-box" >
+            <button type="submit">
+               
+           <a href="DangKi" style="color:black; text-decoration: none ; margin-bottom: 5px;">    Đăng ký tk
+                </a>	</button>
+            
+        </div>
+      </div>
+    </p>
+    </span>
+    <!-- <table>
+      <img src="BÌA.jpg" width="1300" height="400 ">
+  </table> -->
+   </body>
+</html>

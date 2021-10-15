@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Document</title>
+    <style>
+       
+       
+       .Box1{
+           background-color:black;
+           width: 100%;
+           height: 60px;
+           position: relative;
+          position: fixed;
+          top: 0;
+       }
+      .LinhCloder{
+          display: flex;
+          justify-content: space-between;
+      }
+       
+       .LinhCloderText {
+        
+           padding-right: 0;
+           margin: 17px;
+       }
+       .Quy2002{
+           color: aliceblue;
+           color: coral;
+           list-style: none;
+           margin-left: 30px;
+           display: inline-block;
+           font-size: 25px;
+           
+       }
+       .Quy{
+           color: aliceblue;
+           list-style: none;
+           margin-left: 30px;
+           display: inline-block;
+           font-size: 20px;
+       }
+       .LinhCloderText2 {
+           padding-left: 0;
+           margin: 10px;
+       }
+       .Quy2{
+           color: aliceblue;
+           list-style: none;
+           margin-right: 30px;
+           display: inline-block;
+           font-size: 20px;
+       }
+       .h1{
+           margin-top: 10px;
+       }
+       .input {
+           background-size: 100px;
+       }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <div class="Box1">  
+            <div class="LinhCloder">
+            <ul class="LinhCloderText">
+                <li class="Quy2002" > LinhCloder</li>
+                <li class="Quy "> <a href="TrangChuWed1.html" style="color: aliceblue; text-decoration: none;">  Trang Chủ</li></a>  
+                
+            </ul>
+            <ul class="LinhCLoderText2">
+                <li class="Quy2">
+                    Giỏ Hàng
+                </li>
+                <li class="Quy2">
+                  <a href="DanhNhap.html" style="color: aliceblue;  font-size:unset; text-decoration: none; " >  Đăng Nhập </a> 
+                </li>
+                <li class="Quy2">
+                    Đăng Xuất
+                </li>
+            </ul>
+            
+        </div>
+        </div>
+        <table> 
+    <div class="SanPham">
+        <tr>  
+       <td> 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        &emsp;    <img src="1.jpg " width="500px" height="500px">
+       </td>
+       <td>
+           <h2 style="margin-bottom: 30px  ; margin-left: 100px;" >
+                (HÀNG ODER 15 NGÀY) VÁY VÀNG KHUY CÚC<br />
+                
+            <!-- <input type="button"  value="130.000"  > -->
+              <h2 style="color:coral ; margin-left: 130px; ">
+                
+                ✔ Giá: 130.000đ
+              </h2> 
+            
+
+          
+        
+           
+           <h3 style="margin-left: 100px; margin-bottom: 30px;"> 
+            🚛 Vận Chuyển (Miễn phí nội Thành Hà Nội) <br />
+            ✈  Hàng Đặt Trước (có hàng sau 12 ngày)
+        </h3 >
+          
+        </h2>
+        <div class="SoLuong">  
+        <h2 style="margin-left:80px ;">
+            Số Lượng 
+            <button class="cong"  onclick="gettex()" > +  </button> 
+            <label class="so"  > 1 </label>
+            
+          <script>
+          
+              function gettex(){
+                  var c = document.querySelector('button').value;
+                //   console.log(c * 13000);
+
+                     var d = document.querySelector('.so')
+                     d = d.innerText ++ * 13000 + 13000;
+                     console.log(d.innerText ++ * 13000 + 13000);
+
+                //  document.write(d.innerText ++ * 13000 + 13000);
+                document.getElementById("quy").innerHTML = d;
+
+              }
+             
+          </script>
+
+           <button class="tru"  onclick="gettex1()"> - </button>
+           <script>
+          
+            function gettex1(){
+                var a = document.querySelector(".tru").value;
+                // console.log(a * 13000);
+
+                   var b = document.querySelector('.so')
+                b=   b.innerText -- * 13000 - 13000
+                   console.log(b.innerText -- * 13000 - 13000);
+                // document.write(b.innerText -- * 13000 - 13000);
+                document.getElementById("quy").innerHTML = b;
+            }
+           
+        </script>
+
+            <!-- <input onclick="var result = document.getElementById('quantity');
+            var qty = result.value; if( !isNaN(qty)  ) 
+            result.value--;
+            return false;
+            " type='button' value=' - ' />
+       <input id='quantity' min='1' name='quantity' type='button' value=' 1 ' />
+       <input onclick="var result = document.getElementById('quantity'); 
+       var qty = result.value; if( !isNaN(qty)) result.value++;return false;" type='button' value=' + ' /> -->
+            
+         <br />   
+         <br />   
+         Thành tiền: 
+          <p id="quy">   13000 </p>  
+              
+            </div>
+        </h2>
+        
+       </td>
+    </tr> 
+    </div>
+
+</table>
+</body>
+</html>

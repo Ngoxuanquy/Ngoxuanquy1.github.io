@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var counes = [{
+            id: 1,
+            name:  'quy',
+            age:  18
+        },
+        {
+            id: 2,
+            name: 'linh',
+            age: 20
+        }
+        ];
+        var a =counes.map(function(b) {
+           return {
+               id: b.id,
+               name: `Khoa hoc: ${b.name} `,
+               age: `${b.age }: Tuoi`
+           };
+        })
+        console.log(a);
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

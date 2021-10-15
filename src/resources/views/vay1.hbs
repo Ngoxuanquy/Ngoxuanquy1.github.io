@@ -1,0 +1,113 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <table> 
+        </div>
+        </div>
+        <table> 
+    <div class="SanPham">
+        <tr>  
+       <td> 
+        <br />
+        <br />
+        <br />
+       <img src="{{trang_chu.anh}}" width="400px" height="500px" style="margin:80px " >
+        
+       </td>
+       <td>
+           <h2 style="margin-bottom: 30px  ; margin-left: 100px;" >
+                {{trang_chu.name}}<br />
+                
+            <!-- <input type="button"  value="130.000"  > -->
+              <h2 style="color:coral ; margin-left: 130px; ">
+                
+                ✔ Giá: {{trang_chu.Gia}} Đ
+              </h2> 
+              <h3>
+         {{trang_chu.chitiet}}
+
+              </h3>
+          
+        </h2>
+        <div class="SoLuong ">  
+        <h2 style="margin-left:80px ;">
+            Số Lượng 
+            <button style="" class="cong"  onclick="gettex1()" >  -  </button> 
+            <label class="so"  > 1 </label>
+       
+           <button class="tru"  onclick="gettex()"> + </button>
+           <script>
+         
+            function gettex1(){
+                var a = document.querySelector(".tru").value;
+                   var b = document.querySelector('.so')
+                if(b.innerText >= 1){
+                b=   b.innerText -- * {{trang_chu.Gia}} - {{trang_chu.Gia}}
+                   console.log(b.innerText -- * {{trang_chu.Gia}} - {{trang_chu.Gia}});
+                document.getElementById("quy").innerHTML = b;
+            }
+                if(b.innerText < 1){
+                    alert("Vui Lòng Mua Thêm");
+                }
+            }
+        </script>
+          <script>
+              function gettex(){
+                  var c = document.querySelector('button').value;
+                //   console.log(c * 13000);
+
+                     var d = document.querySelector('.so')
+                     d = d.innerText ++     * {{trang_chu.Gia}} + {{trang_chu.Gia}};
+                     console.log(d.innerText ++ * {{trang_chu.Gia}} + {{trang_chu.Gia}});
+
+                //  document.write(d.innerText ++ * 13000 + 13000);
+                document.getElementById("quy").innerHTML = d;
+
+              }
+             
+          </script>
+       
+            
+         <br />   
+         <br />   
+         Thành tiền: 
+          <label id="quy">   {{trang_chu.Gia}} </label>  
+            <p style="margin-left: 40px;"> 
+                <br />
+                 <button class="giohang"> Thêm Vào Giỏ Hàng</button>
+            </p>  
+               <br />
+           <h3 style="margin-left: 100px; margin-bottom: 30px;"> 
+            🚛 Vận Chuyển (Miễn phí nội Thành Hà Nội) <br />
+            ✈  Hàng Đặt Trước (có hàng sau 12 ngày)
+        </h3 >
+                
+            </div>
+        </h2>
+        
+       </td>
+    </tr> 
+    
+    </div>
+</table>    
+               
+               
+    <style>
+        .gio {
+            background-color: chocolate;
+            color: black;
+        margin-left: 300px;
+            
+        }
+        #quy {
+            color:black;
+            margin-bottom: 10px;
+        }
+       
+    </style>
+              
+</body>
+</html>
